@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "dev" : "tailwindcss -i ./src/tailwind_input.css -o ./app/css/styles.css",
+    "watch" : "tailwindcss -i ./src/tailwind_input.css -o ./app/css/styles.css --watch"
+  },
+  "dependencies": {
+    "axios": "^1.7.7"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.14"
+  }
+}
