@@ -1,16 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tailwind CSS Site</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="assets/fa/css/all.css">
 </head>
+
 <body>
 
-    <h1 class="text-blue-500">
-        Hello
-    </h1>
-    
+    <div>
+        <header class="">
+            <nav class="mx-auto max-w-6xl flex items-center justify-between px-6 py-2">
+                <aside class="text-primary hover:text-primary/50 flex items-center gap-2">
+                    <span class="inline-block -rotate-[30deg]">
+                        <i class="fas fa-plane fa-2x"></i>
+                    </span>
+                    <span class="text-2xl">
+                        Journey
+                    </span>
+                </aside>
+                <aside class="text-slate-600 hidden md:block">
+                    <ul class="flex font-semibold">
+                        <li>
+                            <a href="#" class="py-4 px-5 inline-block active-menu">Adventure</a>
+                        </li>
+                        <li>
+                            <a href="#" class="py-4 px-5 inline-block">Loading</a>
+                        </li>
+                        <li>
+                            <a href="#" class="py-4 px-5 inline-block">Restraurant</a>
+                        </li>
+                        <li>
+                            <a href="#" class="py-4 px-5 inline-block">Explore</a>
+                        </li>
+                    </ul>
+                </aside>
+                <aside class="flex items-center gap-4 font-semibold text-sm">
+                    <span class="text-primary">
+                        37<sup>o</sup>F
+                    </span>
+                    <span class="text-lg">
+                        Donate
+                    </span>
+                    <span class="inline-block">
+                        <i class="fas fa-bars fa-2x"></i>
+                    </span>
+                </aside>
+            </nav>
+        </header>
+
+
+        <!-- Hero Section -->
+        <section class="h-[80vh]">
+            <div class="max-w-6xl mx-auto h-full px-6 py-2 flex flex-col md:flex-row gap-4 items-start relative">
+                <aside class="md:w-3/5 mt-24 md:mt-0">
+                    <h1 class="text-6xl font-semibold max-w-sm mb-7">
+                        Enjoy your personal moment
+                    </h1>
+                    <p class="text-slate-600 max-w-md mb-5">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Pariatur architecto alias recusandae inventore!
+                    </p>
+                    <div class="flex text-sm font-semibold text-slate-700">
+                        <span class="inline-flex items-center gap-2 flex-1">
+                            <span class="flex justify-center items-center bg-teal-500 rounded-full h-8 w-8 text-white">
+                                <i class="fas fa-home"></i>
+                            </span>
+                            <p>
+                                650 Resorts
+                            </p>
+                        </span>
+                        <span class="inline-flex items-center gap-2 flex-1">
+                            <span class="flex justify-center items-center bg-teal-500 rounded-full h-8 w-8 text-white">
+                                <i class="fas fa-book-open"></i>
+                            </span>
+                            <p>
+                                2 Branches in US
+                            </p>
+                        </span>
+                    </div>
+                </aside>
+                <aside class="bg-blue-600 md:w-2/5 w-full h-full min-h-56 bg-cover bg-right-bottom bg-repeat bg-[url('../assets/images/hero_bg.avif')] bg-clip relative">
+                    <div role="button" class="absolute bottom-[45%] left-[45%] h-16 w-16 text-white flex justify-center items-center border-2 rounded-full">
+                        <i class="fas fa-play fa-2x"></i>
+                    </div>
+                </aside>
+                <!-- Floating  -->
+                <div class="bg-teal-500 min-h-10 absolute w-full bottom-10 max-w-4xl"></div>
+            </div>
+
+        </section>
+    </div>
+
 </body>
+
 </html>
