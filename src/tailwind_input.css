@@ -9,3 +9,6 @@
 .bg-clip{
     clip-path: polygon(30% 0, 100% 0%, 100% 100%, 0 100%, 0 30%);
 }
+.btn-primary{
+    @apply bg-gradient-to-r from-teal-600 to-teal-800 py-1 px-3 rounded-lg text-white;
+}

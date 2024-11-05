@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="assets/fa/css/all.css">
+</head>
+
+<body class="bg-slate-100 text-slate-700">
+
+    <div class="min-h-96 max-w-5xl mx-auto my-12">
+        <header class="text-right mb-6">
+            <button class="btn-primary z-30 relative" id="btn_open_modal" onclick="toggleModal('open')">
+                <i class="fas fa-user-plus"></i>
+                <span>Add User</span>
+            </button>
+        </header>
+
+
+        <section class="flex gap-4">
+            <aside class="bg-white min-h-52 flex-1 max-w-sm shadow-lg border">
+                <ul class="divide-y" id="ui-user-list">
+                    <!-- Populated From JS -->
+                </ul>
+            </aside>
+            <aside class="bg-white min-h-52 flex-grow py-3 px-4">
+                User Details
+            </aside>
+        </section>
+    </div>
+
+
+
+    <!-- Modal Element -->
+    <section id="modal" class="fixed top-0 left-0 w-full h-dvh bg-black/50 justify-center items-center px-6 z-50 hidden">
+        <div class="bg-white w-full max-w-xl">
+            <header class="flex items-center justify-between py-2 px-4">
+                <aside class="font-semibold">
+                    <i class="fas fa-user-plus"></i>
+                    Add User
+                </aside>
+                <aside>
+                    <button class="text-xl" id="btn_close_modal"  onclick="toggleModal('close')">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </aside>
+            </header>
+            <section class="py-3 px-4">
+                <form method="post" name="frm_user" class="grid grid-cols-1 sm:grid-cols-2 gap-5" onsubmit="saveUser(event)">
+                    <aside class="">
+                        <input type="text" placeholder="Firstname" required name="firstname"
+                            class="h-10 px-2 border border-slate-900 shadow-sm w-full rounded-md">
+                    </aside>
+                    <aside class="">
+                        <input type="text" placeholder="Lastname" required name="lastname"
+                            class="h-10 px-2 border border-slate-900 shadow-sm w-full rounded-md">
+                    </aside>
+                    <aside class="">
+                        <input type="email" placeholder="Email Address" required name="email"
+                            class="h-10 px-2 border border-slate-900 shadow-sm w-full rounded-md">
+                    </aside>
+                    <aside class="">
+                        <input type="tel" placeholder="Phone Number" required name="phone"
+                            class="h-10 px-2 border border-slate-900 shadow-sm w-full rounded-md">
+                    </aside>
+                    <aside class="">
+                        <select type="text" placeholder="Gender" name="gender" required
+                            class="h-10 px-2 border border-slate-900 shadow-sm w-full rounded-md">
+                            <option value="">Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </aside>
+                    <aside class="">
+                        <input type="text" placeholder="Address" name="address"
+                            class="h-10 px-2 border border-slate-900 shadow-sm w-full rounded-md">
+                    </aside>
+                    <aside class="sm:col-span-2 text-right">
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-save"></i> Save User
+                        </button>
+                    </aside>
+                </form>
+            </section>
+        </div>
+    </section>
+
+    <!-- Connect Javascript -->
+    <script src="js/user_script.js"></script>
+</body>
+
+</html>
