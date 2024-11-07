@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food List</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="assets/fa/css/all.css">
+</head>
+
+<body class="bg-slate-100 text-slate-700 px-20">
+
+    <div class="min-h-96 max-w-5xl mx-auto my-12">
+        <aside class="mb-5">
+            <input type="text" id="food-input"
+                class="h-10 px-2 border border-slate-900 shadow-sm w-full max-w-sm rounded-md">
+            <button class="btn-primary" id="add-btn">
+                Add
+            </button>
+        </aside>
+
+        <aside class="max-h-96 overflow-auto w-fit min-w-[384px] bg-white shadow-md rounded-lg">
+            <ul id="food-list-ul" class="w-full max-w-sm rounded-lg overflow-hidden">
+                <!-- Populated by JS -->
+            </ul>
+        </aside>
+    </div>
+
+
+    <!-- Internal JavaScript controlling food input -->
+    <script>
+        let addBtn = document.getElementById('add-btn');
+        let foodInput = document.getElementById('food-input');
+
+
+        addBtn.addEventListener('click', () => {
+            let foodItem = foodInput.value;
+            storeFoodItem(foodItem);
+            foodInput.value = '';
+            displayFoodItems();
+        })
+
+
+        // function to store item
+        let storeFoodItem = (item) => {
+            localStorage.setItem('food_item', item);
+        }
+
+        // Function to display items
+        let displayFoodItems = () => {
+            let item = localStorage.getItem('food_item');
+
+            let htmlListItem = `<li class="py-2 px-4 even:bg-slate-100">
+                                    ${item}
+                                </li>`;
+
+            document.getElementById('food-list-ul').innerHTML = htmlListItem;
+        }
+
+        // Call the display food items
+        displayFoodItems();
+
+
+    </script>
+
+</body>
+
+</html>
